@@ -1,12 +1,12 @@
-import React from 'react';
-import Header from '../components/Header';
-import HeroSection from '../components/HeroSection';
+import React from "react";
 
-const HomePage = () => (
-  <div>
-    <Header />
-    <HeroSection />
-  </div>
-);
+const HomePage = () => {
+  return (
+    <div>
+      <h1>Welcome to Communion Hub</h1>
+      {/* Add other content here */}
+    </div>
+  );
+};
 
 export default HomePage;

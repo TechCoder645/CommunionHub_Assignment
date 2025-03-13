@@ -1,0 +1,25 @@
+@keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes zoomOut {
+    from {
+      transform: scale(1.05);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .zoom-in {
+    animation: zoomIn 0.3s forwards;
+  }
+  
+  .zoom-out {
+    animation: zoomOut 0.3s forwards;
+  }
