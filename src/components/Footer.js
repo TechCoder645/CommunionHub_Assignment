@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
         <div className="text-center border-t border-gray-300 pt-6">
           <p className="text-gray-600 mb-4">
-            Copyright © 2024. All rights reserved to Communion
+            Copyright © 2025. All rights reserved to Communion
           </p>
           <div className="flex justify-center space-x-4">
             <button className="text-gray-600 hover:text-gray-800">

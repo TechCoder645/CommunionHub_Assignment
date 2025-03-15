@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddEventForm = ({ addEvent }) => {
   const [eventData, setEventData] = useState({
@@ -14,6 +15,8 @@ const AddEventForm = ({ addEvent }) => {
     capacityType: "Unlimited",
     capacity: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,6 +43,7 @@ const AddEventForm = ({ addEvent }) => {
       capacityType: "Unlimited",
       capacity: "",
     });
+    navigate("/events/upcoming"); // Redirect to Upcoming Events page
   };
 
   return (

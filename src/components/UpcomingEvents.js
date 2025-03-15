@@ -85,12 +85,11 @@ const UpcomingEvents = ({ events }) => {
                 </Link>
 
                 {/* Event Details Button */}
-                <Link
-                  to={`/events/${event.id}`}
-                  className="mt-4 block bg-gray-900 text-white text-center py-2 rounded-lg hover:bg-gray-800"
+                <span
+                  className="mt-4 block bg-gray-900 text-white text-center py-2 rounded-lg hover:bg-gray-800 cursor-pointer"
                 >
                   Event Details →
-                </Link>
+                </span>
               </div>
             </div>
           ))
