@@ -6,7 +6,7 @@ const CreateEvent = ({ addEvent }) => {
     <div className="container mx-auto px-6 py-12">
       {/* Header Section */}
       <div className="max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-8">
           Create a New Event
         </h1>
         <h2 className="text-2xl md:text-3xl text-blue-600 font-bold mt-2">
