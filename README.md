@@ -3,6 +3,9 @@
 ## 🌟 Project Overview
 CommunionHub is a **modern React-based web application** designed to provide a seamless user experience. It leverages the latest technologies like **React 19, React Router, Framer Motion, and Tailwind CSS** to ensure smooth navigation, elegant animations, and a responsive design.
 
+## 🎥 Live Demo
+🌐 Check out the live demo: [CommunionHub](https://communionhub645.netlify.app/)
+
 ## 🚀 Features
 ✅ **Built with React 19** and React Router for smooth navigation.  
 ✅ **Tailwind CSS** for responsive and modern styling.  
