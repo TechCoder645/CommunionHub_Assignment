@@ -12,8 +12,11 @@ const App = () => {
   const [events, setEvents] = useState(initialEvents);
 
   const addEvent = (newEvent) => {
-    setEvents([...events, newEvent]);
+    const eventWithId = { ...newEvent, id: events.length + 1 }; // Generate unique ID
+    console.log("Adding event:", eventWithId); // Log the new event
+    setEvents([...events, eventWithId]);
   };
+
 
   return (
     <Router>

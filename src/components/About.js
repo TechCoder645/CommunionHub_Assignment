@@ -50,6 +50,21 @@ const About = () => {
         </button>
       </div>
 
+      {/* About Communion Section */}
+      <div className="bg-white text-gray-900 py-12 px-6 text-center">
+        <h2 className="text-2xl font-bold">About Communion</h2>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Building bridges across faiths and fostering meaningful connections in our diverse community.
+        </p>
+        <h3 className="text-xl font-bold mt-6">Our Mission</h3>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Communion is dedicated to creating an inclusive space where people of all faiths and backgrounds can come together, share experiences, and build meaningful relationships. We believe that understanding and respect across different beliefs leads to a stronger, more united community.
+        </p>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Through our platform, we facilitate events, discussions, and activities that promote interfaith dialogue, cultural exchange, and mutual support. Our goal is to break down barriers and foster genuine connections that enrich our shared human experience.
+        </p>
+      </div>
+
       {/* Image Gallery */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
         <motion.img

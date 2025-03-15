@@ -52,9 +52,15 @@ const UpcomingEvents = ({ events }) => {
               {/* Event Image with Date */}
               <div className="relative h-48">
                 <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
-                <div className="absolute top-2 right-2 bg-gray-900 text-white px-3 py-1 text-sm font-bold rounded-lg text-center">
-                  {event.date.split(",")[0]} <br /> {event.date.split(",")[1].trim()}
-                </div>
+                {event.date && event.date.includes(",") ? (
+                  <div className="absolute top-2 right-2 bg-gray-900 text-white px-3 py-1 text-sm font-bold rounded-lg text-center">
+                    {event.date.split(",")[0]} <br /> {event.date.split(",")[1].trim()}
+                  </div>
+                ) : (
+                  <div className="absolute top-2 right-2 bg-gray-900 text-white px-3 py-1 text-sm font-bold rounded-lg text-center">
+                    {event.date}
+                  </div>
+                )}
               </div>
 
               {/* Event Details */}

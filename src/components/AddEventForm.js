@@ -4,10 +4,8 @@ const AddEventForm = ({ addEvent }) => {
   const [eventData, setEventData] = useState({
     title: "",
     description: "",
-    category: "",
-    categories: [],
-    image: null,
-    imagePreview: "",
+    category: "Social",
+    image: "",
     location: "",
     startDate: "",
     startTime: "",
@@ -22,27 +20,6 @@ const AddEventForm = ({ addEvent }) => {
     setEventData({ ...eventData, [name]: value });
   };
 
-  const handleCategoryAdd = () => {
-    if (eventData.category && !eventData.categories.includes(eventData.category)) {
-      setEventData({
-        ...eventData,
-        categories: [...eventData.categories, eventData.category],
-        category: "",
-      });
-    }
-  };
-
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setEventData({
-        ...eventData,
-        image: file,
-        imagePreview: URL.createObjectURL(file),
-      });
-    }
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (eventData.endDate < eventData.startDate || (eventData.endDate === eventData.startDate && eventData.endTime <= eventData.startTime)) {
@@ -50,6 +27,19 @@ const AddEventForm = ({ addEvent }) => {
       return;
     }
     addEvent(eventData);
+    setEventData({
+      title: "",
+      description: "",
+      category: "Social",
+      image: "",
+      location: "",
+      startDate: "",
+      startTime: "",
+      endDate: "",
+      endTime: "",
+      capacityType: "Unlimited",
+      capacity: "",
+    });
   };
 
   return (
@@ -59,15 +49,9 @@ const AddEventForm = ({ addEvent }) => {
       <textarea name="description" placeholder="Event Description" value={eventData.description} onChange={handleChange} className="w-full p-2 border mb-2" required />
       <div className="flex gap-2 mb-2">
         <input type="text" name="category" placeholder="Category" value={eventData.category} onChange={handleChange} className="p-2 border" />
-        <button type="button" onClick={handleCategoryAdd} className="bg-blue-500 text-white px-4 py-2">Add</button>
       </div>
-      <div className="mb-2">
-        {eventData.categories.map((cat, index) => (
-          <span key={index} className="bg-gray-200 p-1 rounded m-1">{cat}</span>
-        ))}
-      </div>
-      <input type="file" accept="image/*" onChange={handleImageUpload} className="mb-2" />
-      {eventData.imagePreview && <img src={eventData.imagePreview} alt="Preview" className="w-32 h-32 object-cover mb-2" />}
+      <input type="file" accept="image/*" onChange={(e) => handleChange({ target: { name: 'image', value: URL.createObjectURL(e.target.files[0]) } })} className="mb-2" />
+      {eventData.image && <img src={eventData.image} alt="Preview" className="w-32 h-32 object-cover mb-2" />}
       <input type="text" name="location" placeholder="Location" value={eventData.location} onChange={handleChange} className="w-full p-2 border mb-2" required />
       <input type="date" name="startDate" value={eventData.startDate} onChange={handleChange} className="w-full p-2 border mb-2" required />
       <input type="time" name="startTime" value={eventData.startTime} onChange={handleChange} className="w-full p-2 border mb-2" required />

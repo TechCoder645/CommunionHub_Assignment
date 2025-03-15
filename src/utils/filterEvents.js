@@ -18,8 +18,11 @@ export const filterEvents = (events, filter) => {
   const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
   const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 
-  return events.filter((event) => {
+return events.filter((event) => {
+    if (!event.date || typeof event.date !== 'string') return false; // Validate event date
+
     let eventDateStr = event.date.split(" - ")[0]; // Get only the first date if it's a range
+
     let eventDate = new Date(eventDateStr.replace(/,/g, "")); // Convert to Date format
 
     if (isNaN(eventDate)) return false; // Skip invalid dates
