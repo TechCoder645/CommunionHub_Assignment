@@ -61,17 +61,37 @@ npm test
 ## 📂 Project Structure
 ```
 communionhub-app/
-├── public/          # 🌍 Static assets
-├── src/             # 🔥 Source code
-│   ├── components/  # 🧩 Reusable UI components
-│   ├── pages/       # 📄 Application pages
-│   ├── assets/      # 🎨 Images, fonts, etc.
-│   ├── styles/      # 🎀 Tailwind CSS styles
-│   ├── App.js       # 🏠 Main application file
-│   ├── index.js     # 🚀 Entry point
-├── .gitignore       # 🙅 Files to ignore in Git
-├── package.json     # 📦 Project dependencies and scripts
-├── README.md        # 📘 Project documentation
+├── node_modules/               # 📦 Node.js modules
+├── public/                     # 🌍 Static assets
+│   ├── favicon.ico             # 🔖 Favicon
+│   ├── index.html              # 📜 Main HTML file
+│   └── ...                     # 📂 Other static assets
+├── src/                        # 🔥 Source code
+│   ├── assets/                 # 🎨 Images, fonts, etc.
+│   ├── components/             # 🧩 Reusable UI components
+│   │   ├── About.js            # ℹ️ About component
+│   │   ├── AddEventForm.js     # 📝 Form to add new events
+│   │   ├── CreateEvent.js      # 🎉 Component to create events
+│   │   ├── Footer.js           # 🔚 Footer component
+│   │   ├── Header.js           # 📌 Header component
+│   │   ├── HeroSection.js      # 🏆 Hero section component
+│   │   ├── UpcomingEvents.js   # 📅 Component to display upcoming events
+│   │   └── ...                 # 📂 Other components
+│   ├── data/                   # 📊 Initial data for the application
+│   │   └── events.js           # 📅 Initial events data
+│   ├── styles/                 # 🎀 Tailwind CSS styles
+│   │   └── animations.css      # 🎭 Custom animations
+│   ├── utils/                  # 🔧 Utility functions
+│   ├── App.js                  # 🏠 Main application file
+│   ├── App.test.js             # ✅ Tests for the main application file
+│   ├── index.js                # 🚀 Entry point
+│   ├── reportWebVitals.js      # 📊 Web vitals reporting
+│   └── setupTests.js           # 🛠 Setup for tests
+├── .gitignore                  # 🙅 Files to ignore in Git
+├── package-lock.json           # 🔒 Lockfile for npm
+├── package.json                # 📦 Project dependencies and scripts
+├── tailwind.config.js          # 🎨 Tailwind CSS configuration
+└── README.md                   # 📘 Project documentation
 ```
 
 ## 📌 Key Dependencies
